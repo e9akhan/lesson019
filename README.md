@@ -79,9 +79,11 @@ def list_of_lists(data):
 **7. Complement of sets**
 
 ```python
-def set_complement(*args):
+def set_complement(*args, verbose=False):
     """
     Return a set of the complement of all the lists provided in *args for every combination of lists
+
+    Include the lists considered in each result when verbose=True
     """
 ```
 
@@ -101,11 +103,13 @@ def set_complement(*args):
 **8. Intersecting sets**
 
 ```python
-def set_intersection(*args):
+def set_intersection(*args, verbose=False):
     """
     Return a list of lists of
     - the intersection of all sets
     - the intersection of every possible combination of sets from all sets provided
+
+    Include the lists considered in each result when verbose=True
     """
 ```
 
