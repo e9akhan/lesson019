@@ -127,4 +127,68 @@ def dict_compare(*args):
     Make no assumption about the order of keys or the depth of the data.
 
     Your compare function must use recursion.
-    """
+    """  
+```
+
+**10. Create a dict from two given lists**
+
+Write a function `dict_from_lists()` that
+1. takes 2 lists
+2. create a dict such that the keys are elements from the first list and the values are elements from the second list
+
+
+```python
+def dict_from_lists(list1, list2):
+    return data
+```
+
+```python
+>>> list1 = [1, 2, 3]
+>>> list2 = ["a", "b", "c"]
+>>> dict_from_lists(list1, list2)
+{"1": "a", "2": "b", "3": "c"}
+```
+
+**11. Create your own secret message**
+
+One classic method for composing secret messages is called a square code.  The spaces are removed from the english text and the characters are written into a square (or rectangle).  For example, the sentence "If man was meant to stay on the ground god would have given us roots" is 54 characters long, so it is written into a rectangle with 7 rows and 8 columns.  
+
+    ifmanwas  
+    meanttos        
+    tayonthe  
+    groundgo  
+    dwouldha  
+    vegivenu  
+    sroots  
+
+The coded message is obtained by reading down the columns going left to right.   For example, the message above is coded as:  
+imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau
+
+Write to function to take a message in plain english and return your secret message. Limit the length of the incoming message to 81 characters.
+
+```python
+def my_secret(message):
+    return secret_message
+```
+
+**12. Create phone "words"**  
+
+Each number on the telephone dial (except 0 and 1) corresponds to three alphabetic characters. Those correspondences are:  
+ 2 ABC  
+ 3 DEF  
+ 4 GHI  
+ 5 JKL  
+ 6 MNO  
+ 7 PRS  
+ 8 TUV  
+ 9 WXY  
+Given a seven digit telephone number, print all 2187 possible "words" that number spells. The input will be one or more seven digit integers. The output should be a dict with the inputs as keys and a list of all possible words. Since the digits 0 and 1 have no alphabetic equivalent, an input number which contains those digits should be rejected with an empty list output.
+
+```python
+def phone_words(ph1, ph2):
+    return 
+```
+```
+>>> output = phone_words(1234567, 2345678)
+>>> output: {"1234567": [], "2345678": ["ADGJMPT", ...]}
+```
