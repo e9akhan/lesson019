@@ -76,3 +76,51 @@ def list_of_lists(data):
 [1, 2, 3, 4, 5, 6, "a", "ab", "ab"]
 ```
 
+**7. Complement of sets**
+
+```python
+def set_complement(*args):
+    """
+    Return a set of the complement of all the lists provided in *args for every combination of lists
+    """
+```
+
+```
+>>> set_complement(list1, list2, list3)
+[
+    [2, 4],
+    [2, 4],
+    [4],
+    [2],
+    [1, 2, 3, 4],
+    [1, 3]
+    [1, 2, 3]
+]
+```
+
+**8. Intersecting sets**
+
+```python
+def set_intersection(*args):
+    """
+    Return a list of lists of
+    - the intersection of all sets
+    - the intersection of every possible combination of sets from all sets provided
+    """
+```
+
+**9. Compare dictionaries**
+
+```python
+def dict_compare(*args):
+    """
+    Using recursion, return a list of all combinations of dictionaries that
+    are identical to each other for all combinations of dictionaries provided.
+
+    Equivalence requires that all included lists are also identical in content
+    but not in sortedness.
+
+    Make no assumption about the order of keys or the depth of the data.
+
+    Your compare function must use recursion.
+    """
