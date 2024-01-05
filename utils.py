@@ -248,9 +248,9 @@ def secret_message(message):
 
     for i in range(size):
         coded_message = ""
-        for message in message_list:
+        for msg in message_list:
             try:
-                coded_message += message[i]
+                coded_message += msg[i]
             except:
                 pass
         coded_list.append(coded_message)
@@ -276,8 +276,8 @@ def combination_words(words, rows, cols, string="", x=0, y=-1, words_combination
     if y == rows - 1:
         return words_combination.append(string)
 
-    for x in range(cols):
-        combination_words(words, rows, cols, string, x, y=y + 1)
+    for row in range(cols):
+        combination_words(words, rows, cols, string, row, y=y + 1)
 
     return words_combination
 
@@ -360,7 +360,7 @@ def set_complement(*args, verbose=False):
 
 def set_intersection(*args, verbose=False):
     """
-    Find set intersection of all posiible combination of
+    Find set intersection of all possible combination of
     lists in args.
 
     Args:-
@@ -372,11 +372,16 @@ def set_intersection(*args, verbose=False):
     """
     complements = []
 
+    common_intersection = set(args[0])
+
     for index, list1 in enumerate(args[: len(args) - 1]):
         for list2 in args[index + 1 :]:
             set_list1 = set(list1)
             set_list2 = set(list2)
+            common_intersection.intersection_update(set_list2)
             complements.append(list(set_list1 & set_list2))
+
+    complements.append(list(common_intersection))
 
     if verbose:
         complements += args
